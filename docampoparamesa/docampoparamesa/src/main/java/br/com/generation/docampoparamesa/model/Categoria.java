@@ -10,7 +10,7 @@ import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "categoria")
-public class CategoriaModel {
+public class Categoria {
 	
 	@javax.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
