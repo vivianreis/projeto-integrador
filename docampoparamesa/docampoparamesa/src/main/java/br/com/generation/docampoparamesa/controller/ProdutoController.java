@@ -19,7 +19,7 @@ import br.com.generation.docampoparamesa.model.Produto;
 import br.com.generation.docampoparamesa.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
