@@ -4,5 +4,6 @@ export class Produto {
     public quantidade: number;
     public nome: string;
     public categoria: string;
-    public disponivel: boolean;
+    public disponivel: boolean
+        
 }
