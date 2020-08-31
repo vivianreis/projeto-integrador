@@ -1,3 +1,5 @@
+import { Categoria } from './Categoria';
+
 export class Produto {
     public id: number;
     public preco: number;    
