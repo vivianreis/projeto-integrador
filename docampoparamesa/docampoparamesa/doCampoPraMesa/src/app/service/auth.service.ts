@@ -19,4 +19,24 @@ export class AuthService {
     return this.http.post('http://localhost:9000/usuarios/cadastrar', Usuario)
   }
 
+  btnLogin(){
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token == null){
+      ok = true;
+    }
+    return ok;
+  } 
+
+  btnSair(){
+    let ok = false
+    let token = localStorage.getItem('token')
+
+    if(token != null){
+      ok = true;
+    }
+    return ok;
+  }
+
 }
