@@ -1,3 +1,7 @@
-#titulo-quem-somos {
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&display=swap');
+
+#jumbotron-main h1 {
     font-family: 'Gloria Hallelujah', cursive;
+    padding-bottom: 10px;
+    /*font-family: 'Amatic SC', cursive;*/
 }
