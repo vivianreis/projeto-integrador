@@ -12,11 +12,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   logar(UsuarioLogin: UsuarioLogin) {
-    return this.http.post('http://localhost:9000/usuarios/logar', UsuarioLogin)
+    return this.http.post('http://localhost:8080/usuarios/logar', UsuarioLogin)
   }
 
   cadastrar(Usuario: Usuario) {
-    return this.http.post('http://localhost:9000/usuarios/cadastrar', Usuario)
+    return this.http.post('http://localhost:8080/usuarios/cadastrar', Usuario)
   }
 
 }
