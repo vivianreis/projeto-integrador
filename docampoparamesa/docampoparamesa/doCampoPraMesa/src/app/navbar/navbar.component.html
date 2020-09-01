@@ -20,9 +20,24 @@
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink='/contato'>Contato</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink='/cadastro'>Cadastro</a>
-            </li>
+
+            <div *ngIf='auth.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link text-light" routerLink='/login'>Login</a>
+                </li>
+            </div>
+
+            <div *ngIf='auth.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link text-light" routerLink='/cadastro'>Cadastro</a>
+                </li>
+            </div>
+
+            <div *ngIf='auth.btnSair()'>
+                <li class="nav-item">
+                    <a class="nav-link text-light" (click)='sair'>Sair</a>
+                </li>
+            </div>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
