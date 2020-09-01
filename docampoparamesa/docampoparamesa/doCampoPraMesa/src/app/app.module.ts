@@ -14,6 +14,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
+import { LojaComponent } from './loja/loja.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     QuemSomosComponent,
     ContatoComponent,
     CadastroComponent,
-    LoginComponent
+    LoginComponent,
+    LojaComponent
   ],
   imports: [
     BrowserModule,

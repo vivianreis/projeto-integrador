@@ -1,0 +1,17 @@
+<div class="container">
+    <!--primeira linha produto-->
+
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="card" *ngFor="let item of listaProdutos" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.produto}}</h5>
+                  <p class="card-text">Produto: {{item.produto.nome}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
