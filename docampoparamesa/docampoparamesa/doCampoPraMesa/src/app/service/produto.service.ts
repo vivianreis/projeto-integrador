@@ -12,6 +12,7 @@ export class ProdutoService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
 
+
   getAllProdutos(){
     return this.http.get('http://localhost:9000/produtos', this.token)
   }

@@ -15,7 +15,7 @@ export class LojaComponent implements OnInit {
   listaProdutos: Produto[]
 
   categoria: Categoria = new Categoria()
-  listaCategoria: Categoria[]
+  listaCategorias: Categoria[]
 
   constructor(
     private produtoService: ProdutoService,
@@ -37,7 +37,7 @@ export class LojaComponent implements OnInit {
 
   findAllCategorias(){
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) =>{
-      this.listaCategoria = resp
+      this.listaCategorias = resp
     })
   }
 
