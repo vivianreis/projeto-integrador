@@ -12,6 +12,9 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class AdminComponent implements OnInit {
 
+  key = 'data'
+  reverse = false
+
   produto: Produto = new Produto()
   listaProdutos: Produto[]
   idProduto: number
