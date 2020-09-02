@@ -39,4 +39,13 @@ export class AuthService {
     return ok;
   }
 
+  admin() {
+    let ok = false
+    let email = localStorage.getItem('email')
+    if(email == 'admin@gmail.com') {
+      ok = true
+    }
+    return ok
+  }
+
 }

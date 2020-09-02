@@ -36,9 +36,15 @@
                 </li>
             </div>
 
+            <div *ngIf='auth.admin()'>
+                <li class="nav-item">
+                    <a class="nav-link text-light" routerLink='/admin'>Admin</a>
+                </li>
+            </div>
+
             <div *ngIf='auth.btnSair()'>
                 <li class="nav-item">
-                    <a class="nav-link text-light" (click)='sair'>Sair</a>
+                    <a class="nav-link text-light" (click)='sair()'>Sair</a>
                 </li>
             </div>
 

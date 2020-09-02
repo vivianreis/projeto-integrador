@@ -22,8 +22,7 @@ export class LojaComponent implements OnInit {
     private categoriaService: CategoriaService
   ) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
     this.findAllProdutos()
     this.findAllCategorias()
   }

@@ -15,6 +15,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { LojaComponent } from './loja/loja.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LojaComponent } from './loja/loja.component';
     ContatoComponent,
     CadastroComponent,
     LoginComponent,
-    LojaComponent
+    LojaComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,130 @@
+<div class="container">
+    <nav>
+        <div class="nav nav-tabs mt-5 mb-5" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                aria-controls="nav-home" aria-selected="true">Produto</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Categoria</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+
+        <!--POST DO PRODUTO-->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="col-md-12 mb-4">
+                        <h3 class="text-center mb-4 text-monospace">Cadastre um novo Produto</h3>
+
+                        <div class="form-group">
+                            <label class="text-monospace" for="titulo">Nome do Produto:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o produto"
+                                [(ngModel)]='produto.nome'>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-monospace" for="titulo">Preço:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o preço"
+                                [(ngModel)]='produto.preco'>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-monospace" for="titulo">Quantidade em estoque:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a quantidade"
+                                [(ngModel)]='produto.quantidade'>
+                        </div>
+
+                        <a href="#" class="btn btn-success" (click)='cadastrar()'>Cadastrar</a>
+                    </div>
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col" class="d-flex justify-content-end">Modificações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor='let item of listaProdutos'>
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{produto.nome}}</td>
+                        <td>{{produto.preco}}</td>
+                        <td>{{produto.quantidade}}</td>
+                        <td class="d-flex justify-content-end">
+                            <a class="btn btn-outline-info mr-3">Editar</a>
+                            <a class="btn btn-outline-danger">Apagar</a>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+
+                <hr>
+
+            </div>
+        </div>
+        <!--/POST DO PRODUTO-->
+
+
+        <!--POST DA CATEGORIA-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="col-md-12 mb-4">
+                        <h3 class="text-center mb-4 text-monospace">Cadastre uma nova Categoria</h3>
+
+                        <div class="form-group">
+                            <label class="text-monospace" for="titulo">Nome da Categoria:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a categoria">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-monospace" for="titulo">Nome do Setor:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor">
+                        </div>
+
+                        <a href="#" class="btn btn-success" (click)='cadastrar()'>Cadastrar</a>
+                    </div>
+                </div>
+
+
+                <hr>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Primeiro</th>
+                            <th scope="col">Último</th>
+                            <th scope="col">Nickname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!--/POST DA CATEGORIA-->
+    </div>
+</div>
