@@ -14,26 +14,26 @@
 
         <div class="form-group">
           <label class="text-monospace" for="texto">Produto:</label>
-          <textarea class="form-control" id="texto" cols="30" rows="3" placeholder="Digite aqui"></textarea>
+          <textarea class="form-control" id="texto" cols="30" rows="1" placeholder="Digite aqui"></textarea>
         </div>
+        <a href="#" class="btn btn-success">Buscar</a>
       </div>
     </div>
 
   </div>
   <!--Cards de produtos-->
-  <div class="container">
-    <div class="row">
-      <div class="row d-flex justify-content-center mt-5 mb-5">
-        <div class="col-md-4">
-          <div class="card" *ngFor="let item of listaProdutos" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Produto: {{item.produto}}</h5>
-              <p class="card-text">Produto: {{item.produto.nome}}</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
+  <div class="container justify-content-center ">
+    <div class="row d-flex justify-content-center mt-5 mb-5 " >
+      <div class="col-md-4 mt-4" *ngFor="let item of listaProdutos">
+        <div class="card"  style="width: 18rem;">
+          <img src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Produto: {{item.nome}}</h5>
+            <p class="card-text">Produto: {{item.nome}}</p>
+            <a href="#" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
