@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../model/Produto';
+import { ProdutoService } from '../service/produto.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-delete-produto',
@@ -7,9 +10,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteProdutoComponent implements OnInit {
 
-  constructor() { }
+  produto: Produto = new Produto()
 
-  ngOnInit(): void {
+  constructor(
+    private produtoService: ProdutoService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0,0)
+
+    let id: number = this.route.snapshot.params['id']
+    this.findByIdProduto(id)
+  }
+
+  findByIdProduto(id:number){
+    this.produtoService.getByIdProdutos(id).subscribe((resp: Produto) =>{
+      this.produto=resp
+    })
+  }
+
+  btnSim(){
+    this.produtoService.deleteProduto(this.produto.id).subscribe(() =>{
+      this.router.navigate(['/admin'])
+      alert('Produto apagado com sucesso!')
+    })
+  }
+
+  btnNao(){
+    this.router.navigate(['/admin'])
   }
 
 }

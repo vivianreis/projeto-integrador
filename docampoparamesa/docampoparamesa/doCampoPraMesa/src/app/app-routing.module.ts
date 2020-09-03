@@ -11,6 +11,7 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
+  { path:  'cadastro-categoria', component: PostCategoriaComponent},
   { path: 'loja', component: LojaComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'editar-produto/:id', component: PutProdutoComponent },

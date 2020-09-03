@@ -20,6 +20,8 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.co
     PutProdutoComponent,
     DeleteProdutoComponent,
     PutCategoriaComponent,
-    DeleteCategoriaComponent
+    DeleteCategoriaComponent,
+    PostCategoriaComponent,
+    
   ],
   imports: [
     BrowserModule,

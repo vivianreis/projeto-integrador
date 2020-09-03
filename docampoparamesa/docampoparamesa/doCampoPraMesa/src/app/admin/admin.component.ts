@@ -17,11 +17,11 @@ export class AdminComponent implements OnInit {
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
-  idProduto: number
+
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-  idCategoria: number
+  idCategoria: number 
 
 
   constructor(
@@ -33,6 +33,8 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+
     this.findAllCategorias()
     this.findAllProdutos()
   }
@@ -72,7 +74,7 @@ export class AdminComponent implements OnInit {
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
-        
+        this.produto = new Produto()
         alert('Produto cadastrado com sucesso!')
         this.findAllProdutos()
       })
@@ -80,7 +82,7 @@ export class AdminComponent implements OnInit {
   }
 
   cadastrarCategoria() {
-    if (this.categoria.nome == null) {
+    if (this.categoria.nome == null ) {
       alert('Preencha o campo de nome do tema corretamente')
      } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {

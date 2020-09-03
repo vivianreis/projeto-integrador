@@ -1,53 +1,48 @@
-<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-8">
-            <div class="col-md-12 mb-4">
-                <h3 class="text-center mb-4 text-monospace">Cadastre um novo Produto</h3>
+<div class="">
 
-                <div class="form-group">
-                    <label class="text-monospace" for="titulo">Nome do Produto:</label>
-                    <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o produto">
-                </div>
-                <div class="form-group">
-                    <label class="text-monospace" for="titulo">Preço:</label>
-                    <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o preço">
-                </div>
-                <div class="form-group">
-                    <label class="text-monospace" for="titulo">Quantidade em estoque:</label>
-                    <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a quantidade"
-                        >
-                </div>
-
-                <a href="#" class="btn btn-success">Cadastrar</a>
-            </div>
-        </div>
-
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col" class="d-flex justify-content-end">Modificações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="d-flex justify-content-end">
-                    <a class="btn btn-outline-info mr-3">Editar</a>
-                    <a class="btn btn-outline-danger">Apagar</a>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-
-        <hr>
+  <div class="row mt-5 mb-5">
+    <div class="col-md-4">
 
     </div>
-</div>
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+          <div class="col-md-12 mb-4">
+            <h3 class="text-center mb-4 text-monospace">Atualize o Produto</h3>
+
+            <div class="form-group">
+              <label class="text-monospace" for="titulo">Nome do Produto:</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o produto"
+                [(ngModel)]='produto.nome'>
+            </div>
+            <div class="form-group">
+              <label class="text-monospace" for="titulo">Preço:</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o preço"
+                [(ngModel)]='produto.preco'>
+            </div>
+            <div class="form-group">
+              <label class="text-monospace" for="titulo">Quantidade em estoque:</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a quantidade"
+                [(ngModel)]='produto.quantidade'>
+            </div>
+
+            <div class="form-group m-0 mb-3">
+              <label class="text-monospace" for="tema">Escolha uma Categoria ou
+                <a routerLink="/cadastro-categoria">Cadastre uma Categoria</a> </label>
+              <select name="tema" id='categoria' class="form-control" [(ngModel)]='idCategoria'
+                (change)='findByIdCategoria()'>
+                <option *ngFor='let item of listaCategorias' value={{item.id}}>
+                  {{item.setor}}
+                </option>
+              </select>
+            </div>
+
+            <div class="d-flex justify-content-end mt-3">
+              <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
