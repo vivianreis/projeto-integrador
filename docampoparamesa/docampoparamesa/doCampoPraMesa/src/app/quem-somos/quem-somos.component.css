@@ -1,4 +1,5 @@
-#titulo-quem-somos h1{
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&display=swap');
+ h1, p{
     font-family: 'Gloria Hallelujah', cursive;
 }
 
