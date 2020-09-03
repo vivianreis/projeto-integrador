@@ -16,6 +16,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { LojaComponent } from './loja/loja.component';
 import { AdminComponent } from './admin/admin.component';
+import { PutProdutoComponent } from './put-produto/put-produto.component';
+import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
+import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { AdminComponent } from './admin/admin.component';
     CadastroComponent,
     LoginComponent,
     LojaComponent,
-    AdminComponent
+    AdminComponent,
+    PutProdutoComponent,
+    DeleteProdutoComponent,
+    PutCategoriaComponent,
+    DeleteCategoriaComponent
   ],
   imports: [
     BrowserModule,

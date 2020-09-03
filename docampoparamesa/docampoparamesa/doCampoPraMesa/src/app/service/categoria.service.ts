@@ -24,4 +24,9 @@ export class CategoriaService {
   postCategoria(categoria: Categoria) {
     return this.http.post('http://localhost:9000/categoria', categoria, this.token)
   }
+
+  putCategoria(categoria: Categoria) {
+    return this.http.put('http://localhost:9000/categoria', categoria, this.token)
+  }
+
 }

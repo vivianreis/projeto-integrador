@@ -33,11 +33,11 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.findAllCategoria()
+    this.findAllCategorias()
     this.findAllProdutos()
   }
 
-  findAllCategoria() {
+  findAllCategorias() {
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
@@ -55,19 +55,40 @@ export class AdminComponent implements OnInit {
     })
   }
 
-  cadastrar() {
-    this.produto.id = this.idProduto
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+    })
+  }
+
+  cadastrarProduto() {
+//    this.produto = new Produto()
     this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+    console.log(this.produto)
 
     if(this.produto.nome == null || this.produto.preco == null || this.produto.quantidade == null) {
       alert('Preencha os campos corretamente para cadastrar um novo produto.')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
-        this.produto = new Produto()
+        
         alert('Produto cadastrado com sucesso!')
-        this.findAllProdutos
+        this.findAllProdutos()
       })
     }
   }
-}
+
+  cadastrarCategoria() {
+    if (this.categoria.nome == null) {
+      alert('Preencha o campo de nome do tema corretamente')
+     } else {
+      this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
+        this.categoria = resp
+        this.router.navigate(['/feed'])
+        alert('Categoria cadastrada com sucesso!')
+        this.findAllCategorias()
+      })
+     }
+   }
+  }

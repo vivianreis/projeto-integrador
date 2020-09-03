@@ -24,4 +24,10 @@ export class ProdutoService {
   postProduto(produto: Produto) {
     return this.http.post('http://localhost:9000/produtos', produto, this.token)
   }
+
+  putProduto(produto: Produto) {
+    return this.http.put('http://localhost:9000/produtos', produto, this.token)
+  }
+
+
 }
