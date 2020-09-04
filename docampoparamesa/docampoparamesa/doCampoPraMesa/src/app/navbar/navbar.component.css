@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+
 .texto{
     letter-spacing: .2rem;
     font-size: 16pt;
@@ -5,4 +9,9 @@
 
 a {
     cursor: pointer;
+}
+
+#navbar-main a {
+    font-size: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
