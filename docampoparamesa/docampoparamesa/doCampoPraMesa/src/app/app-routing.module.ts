@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'editar-produto/:id', component: PutProdutoComponent },
   { path: 'delete-produto/:id', component: DeleteProdutoComponent },
   { path: 'editar-categoria/:id', component: PutCategoriaComponent },
-  { path: 'delete-categoria/:d', component: DeleteCategoriaComponent }
+  { path: 'delete-categoria/:id', component: DeleteCategoriaComponent }
 
 ];
 

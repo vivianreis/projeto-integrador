@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../model/Produto';
+import { Categoria } from '../model/Categoria';
+import { ProdutoService } from '../service/produto.service';
+import { CategoriaService } from '../service/categoria.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-put-categoria',
@@ -7,9 +13,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PutCategoriaComponent implements OnInit {
 
-  constructor() { }
+  categoria: Categoria = new Categoria()
 
-  ngOnInit(): void {
+  constructor(
+
+    private categoriaService: CategoriaService,
+    private router: Router,
+    private route: ActivatedRoute
+    
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0, 0)
+
+    let id: number = this.route.snapshot.params["id"];
+    this.findByIdCategoria(id);
+    
+  }
+
+  findByIdCategoria(id: number) {
+    this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) =>{
+      this.categoria = resp;
+    })
+  }
+
+  salvar(){
+    this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) =>{
+      this.categoria = resp
+      this.router.navigate(['/cadastro-categoria'])
+      alert ('Categoria atualizada com sucesso!')
+    })
+  }
+
+  cancelar(){
+    this.router.navigate(['/cadastro-categoria'])
   }
 
 

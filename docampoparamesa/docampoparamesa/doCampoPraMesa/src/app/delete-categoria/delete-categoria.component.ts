@@ -23,13 +23,14 @@ export class DeleteCategoriaComponent implements OnInit {
     window.scroll(0,0)
     
     let id:number = this.route.snapshot.params["id"];
+    console.log(id)
     this.findByIdCategoria(id)
   }
 
   findByIdCategoria(id:number){
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) =>{
       this.categoria = resp
-    })
+    });
   }
 
   btnSim(){
@@ -40,7 +41,7 @@ export class DeleteCategoriaComponent implements OnInit {
   }
 
   btnNao(){
-    this.router.navigate(['/cadastro-tema'])
+    this.router.navigate(['/cadastro-categoria'])
   }
 
 }

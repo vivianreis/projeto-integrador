@@ -1,1 +1,27 @@
-<p>put-categoria works!</p>
+<div class="container">
+
+    <div class="row mt-5 mb-5">
+        <div class="col-md-8">
+  
+            <div>
+                <div class="form-group">
+                  <label for="categoria">Nome da categoria:</label>
+                  <input type="text" class="form-control" id="categoria" placeholder="Digite aqui o seu titulo" [(ngModel)]="categoria.nome">
+                </div>
+                <div class="form-group">
+                    <label class="text-monospace" for="titulo">Nome do Setor:</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor" [(ngModel)]='categoria.setor'>
+                </div>
+  
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
+                </div>
+                <div class="d-flex justify-content-first">
+                    <button type="button" class="btn btn-outline-danger w-25" (click)="cancelar()">Cancelar</button>
+                </div>
+            </div>
+  
+        </div>
+  
+    </div>
+  </div>
