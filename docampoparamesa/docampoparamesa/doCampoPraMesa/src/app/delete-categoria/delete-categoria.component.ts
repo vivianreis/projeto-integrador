@@ -41,7 +41,7 @@ export class DeleteCategoriaComponent implements OnInit {
   }
 
   btnNao(){
-    this.router.navigate(['/cadastro-categoria'])
+    this.router.navigate(['/admin'])
   }
 
 }
