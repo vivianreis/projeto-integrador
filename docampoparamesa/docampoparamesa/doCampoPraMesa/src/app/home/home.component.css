@@ -5,3 +5,12 @@
     padding-bottom: 10px;
     /*font-family: 'Amatic SC', cursive;*/
 }
+
+#cards-home p {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#botoes-home-end a, button  {
+    text-decoration: none;
+    color: white;
+}

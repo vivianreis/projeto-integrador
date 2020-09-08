@@ -1,57 +1,62 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-success">
-    <a class="navbar-brand text-light" href="">
-        <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
-        Do Campo Pra Mesa
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-3 sticky-top" id="navbar-main">
+    <a class="navbar-brand text-success" href="">
+        <img src="https://i.imgur.com/q0wSJCc.png" width="40" height="38" class="d-inline-block align-top"
+            alt="Logo-Do Campo Pra Mesa">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
         aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-light" routerLink='/home'>Home <span class="sr-only">(página atual)</span></a>
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mt-1 ml-5">
+            <li class="nav-item mr-3">
+                <a class="nav-link text-success" routerLink='/home'>Home <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" routerLink='/quem-somos'>Quem Somos</a>
+                <a class="nav-link text-success mr-3" routerLink='/quem-somos'>Quem Somos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" routerLink='/loja'>Loja</a>
+                <a class="nav-link text-success mr-3" routerLink='/loja'>Loja</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" routerLink='/contato'>Contato</a>
+                <a class="nav-link text-success mr-3" routerLink='/contato'>Contato</a>
             </li>
 
-            <div *ngIf='auth.btnLogin()'>
-                <li class="nav-item">
-                    <a class="nav-link text-light" routerLink='/login'>Login</a>
-                </li>
-            </div>
-
-            <div *ngIf='auth.btnLogin()'>
-                <li class="nav-item">
-                    <a class="nav-link text-light" routerLink='/cadastro'>Cadastro</a>
-                </li>
-            </div>
-
-            <div *ngIf='auth.admin()'>
-                <li class="nav-item">
-                    <a class="nav-link text-light" routerLink='/admin'>Admin</a>
-                </li>
-            </div>
-
-            <div *ngIf='auth.btnSair()'>
-                <li class="nav-item">
-                    <a class="nav-link text-light" (click)='sair()'>Sair</a>
-                </li>
-            </div>
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
+    </div>
+    <div class="navbar-nav d-flex">
+
+        <div *ngIf='auth.btnLogin()'>
+            <li class="nav-item">
+                <a class="nav-link text-success mr-1" routerLink='/cadastro'>Cadastro</a>
+            </li>
+        </div>
+
+        <div *ngIf='auth.btnLogin()'>
+            <li class="nav-item">
+                <a class="nav-link text-success mr-3" routerLink='/login'>Login</a>
+            </li>
+        </div>
+
+        <div *ngIf='auth.admin()'>
+            <li class="nav-item">
+                <a class="nav-link text-success mr-3" routerLink='/admin'>Admin</a>
+            </li>
+        </div>
+
+        <div *ngIf='auth.btnSair()'>
+            <li class="nav-item">
+                <a class="nav-link text-success mr-4" (click)='sair()'>Sair</a>
+            </li>
+        </div>
+
+        <a href="/loja">
+            <img src="https://i.imgur.com/EAH1Lby.png" width="40" height="38" alt="Imagem de Carrinho de Compras">
+        </a>
+
+
+
     </div>
 </nav>
