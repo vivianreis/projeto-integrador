@@ -1,3 +1,11 @@
+#footer-copyright {
+  background-color: #1A6B2D;
+}
+
+#footer-main {
+  position: relative;
+  z-index: 1;
+}
 
 ul.social-network {
     list-style: none;
@@ -26,5 +34,9 @@ ul.social-network {
   
   .faInstagram:hover{
   color: #C13584;
+  }
+
+  h4 { 
+    font-family: 'Gloria Hallelujah', cursive;
   }
 
