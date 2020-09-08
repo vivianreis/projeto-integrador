@@ -46,7 +46,7 @@ export class PutCategoriaComponent implements OnInit {
   }
 
   cancelar(){
-    this.router.navigate(['/cadastro-categoria'])
+    this.router.navigate(['/admin'])
   }
 
 

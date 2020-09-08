@@ -58,6 +58,10 @@ export class PutProdutoComponent implements OnInit {
     })
   }
 
+  btnNao(){
+    this.router.navigate(['/admin'])
+  }
+
   findAllCategorias() {
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp

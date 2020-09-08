@@ -52,4 +52,8 @@ export class PostCategoriaComponent implements OnInit {
      }
    }
 
+   btnNao(){
+    this.router.navigate(['/admin'])
+  }
+
 }
