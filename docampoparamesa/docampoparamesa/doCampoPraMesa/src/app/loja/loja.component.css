@@ -3,3 +3,21 @@
 h1 {
     font-family: 'Gloria Hallelujah', cursive;
 }
+
+#menu-pesquisa-loja p { 
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#sidebar-loja {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding-top: 40px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#sidebar-loja { 
+
+}
