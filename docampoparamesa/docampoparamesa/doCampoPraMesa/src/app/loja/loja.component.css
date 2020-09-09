@@ -15,9 +15,6 @@ h3 {
     left: 0;
     overflow: hidden;
     padding-top: 40px;
+    max-height: 481px;
     font-family: 'Gloria Hallelujah', cursive;
-}
-
-#sidebar-loja { 
-
 }
