@@ -1,93 +1,46 @@
-<div class="container">
-
-  <!--Busca por produto e categoria em Perfil Lateral-->
-  <div class="card border-0 mt-5 h-100" style="width: 18rem;" id="sidebar-loja">
-    <div class="d-flex justify-content-center">
-      <img class="card-img-top rounded-circle w-75" src="https://i.imgur.com/m4wPGAl.png" alt="Imagem de capa do card">
-    </div>
-
-    <div class="card-body" id="menu-pesquisa-loja">
-      <p class="card-text text-center text-success">Pesquise por produto ou categoria:</p>
-      <div class="form-group">
-        <label for="texto">Produto:</label>
-        <input type="text" class="form-control" id="titulo" placeholder="">
+<div class="row w-100">
+  <div class="col-md-4 d-flex justify-content-center">
+    <div class="card border-0 mt-5 h-100" style="width: 18rem;">
+      <div class="d-flex justify-content-center">
+        <img class="card-img-top rounded-circle w-75" src="https://i.imgur.com/m4wPGAl.png"
+          alt="Imagem de capa do card">
       </div>
-      <div class="form-group">
-        <label for="titulo">Categoria:</label>
-        <input type="text" class="form-control" id="titulo" placeholder="">
+
+      <div class="card-body" id="menu-pesquisa-loja">
+        <p class="card-text text-center text-success">Pesquise por produto ou categoria:</p>
+        <div class="form-group">
+          <label for="texto">Produto:</label>
+          <input type="text" class="form-control" id="titulo" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="titulo">Categoria:</label>
+          <input type="text" class="form-control" id="titulo" placeholder="">
+        </div>
       </div>
     </div>
   </div>
 
-  <!--Cards de produtos-->
-  <div class="container mt-5 mb-5 ml-5">
-    <div class="row d-flex justify-content-end">
-      <div class="col-md-3 m-2 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card" style="width: 18rem">
+  <div class="col-md-8">
+
+    <div class="row mt-5 mb-3">
+      <div class="col-md-4 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
+        <div class="card mb-5" style="width: 18rem">
           <img
-            src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg"
+            src="{{item.imagem}}"
             class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Produto: {{item.produto}}</h5>
-            <p class="card-text">Categoria: {{item.nome}}</p>
+            <h5 class="card-title">Produto: {{item.nome}}</h5>
+            <p class="card-text">Categoria: {{categoria.nome}}</p>
             <a href="#" class="btn btn-success">Comprar</a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-3 m-2 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Produto: {{item.produto}}</h5>
-            <p class="card-text">Categoria: {{item.nome}}</p>
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 m-2 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Produto: {{item.produto}}</h5>
-            <p class="card-text">Categoria: {{item.nome}}</p>
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 m-2 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Produto: {{item.produto}}</h5>
-            <p class="card-text">Categoria: {{item.nome}}</p>
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 m-2 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card" style="width: 18rem">
-          <img
-            src="https://d26lpennugtm8s.cloudfront.net/stores/746/397/products/uva-benitaka-114121-69ce92a4de840db95615222221953660-640-0.jpg"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Produto: {{item.produto}}</h5>
-            <p class="card-text">Categoria: {{item.nome}}</p>
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-
     </div>
+
   </div>
 </div>
+
+<!--Busca por produto e categoria em Perfil Lateral-->
+
+
+<!--Cards de produtos-->
