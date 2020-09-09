@@ -16,6 +16,7 @@ export class LojaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
+  idCategoria: number 
 
   constructor(
     private produtoService: ProdutoService,
@@ -37,6 +38,12 @@ export class LojaComponent implements OnInit {
   findAllCategorias(){
     this.categoriaService.getAllCategorias().subscribe((resp: Categoria[]) =>{
       this.listaCategorias = resp
+    })
+  }
+
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => {
+      this.categoria = resp;
     })
   }
 
