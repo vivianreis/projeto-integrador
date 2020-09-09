@@ -75,7 +75,7 @@ export class AdminComponent implements OnInit {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
         this.produto = new Produto()
-        alert('Produto cadastrado com sucesso!')
+       alert('Produto cadastrado com sucesso!')
         this.findAllProdutos()
       })
     }
