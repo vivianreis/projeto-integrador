@@ -8,9 +8,15 @@
 
 #cards-home p {
     font-family: 'Gloria Hallelujah', cursive;
+    
 }
 
 #botoes-home-end a, button  {
     text-decoration: none;
     color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
