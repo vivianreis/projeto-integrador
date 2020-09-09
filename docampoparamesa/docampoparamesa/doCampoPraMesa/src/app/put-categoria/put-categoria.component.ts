@@ -5,6 +5,7 @@ import { ProdutoService } from '../service/produto.service';
 import { CategoriaService } from '../service/categoria.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { identifierModuleUrl } from '@angular/compiler';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-put-categoria',
@@ -19,7 +20,8 @@ export class PutCategoriaComponent implements OnInit {
 
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alerta: AlertasService
     
   ) { }
 
@@ -41,7 +43,7 @@ export class PutCategoriaComponent implements OnInit {
     this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) =>{
       this.categoria = resp
       this.router.navigate(['/cadastro-categoria'])
-      alert ('Categoria atualizada com sucesso!')
+      this.alerta.showAlertSucess ('Categoria atualizada com sucesso!')
     })
   }
 

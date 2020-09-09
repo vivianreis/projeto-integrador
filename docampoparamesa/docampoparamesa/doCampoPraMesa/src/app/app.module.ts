@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,7 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
 import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 
 
@@ -41,6 +43,7 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     PutCategoriaComponent,
     DeleteCategoriaComponent,
     PostCategoriaComponent,
+    AlertasComponent,
     
   ],
   imports: [
@@ -48,7 +51,8 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
