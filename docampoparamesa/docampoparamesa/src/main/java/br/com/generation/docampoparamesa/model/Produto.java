@@ -22,6 +22,9 @@ public class Produto {
 	@NotNull
 	@Size(min = 3, max = 255)
 	private String nome;
+	
+	@NotNull
+	private String imagem;
 
 	@NotNull
 	private double preco;
@@ -50,6 +53,14 @@ public class Produto {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	public double getPreco() {
