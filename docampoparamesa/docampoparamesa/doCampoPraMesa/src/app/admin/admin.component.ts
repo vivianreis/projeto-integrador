@@ -4,6 +4,7 @@ import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
 import { Router } from '@angular/router';
 import { ProdutoService } from '../service/produto.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-admin',
@@ -28,8 +29,8 @@ export class AdminComponent implements OnInit {
 
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private router: Router
-
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -70,12 +71,12 @@ export class AdminComponent implements OnInit {
     console.log(this.produto)
 
     if(this.produto.nome == null || this.produto.preco == null || this.produto.quantidade == null) {
-      alert('Preencha os campos corretamente para cadastrar um novo produto.')
+      this.alerta.showAlertDanger('Preencha os campos corretamente para cadastrar um novo produto.')
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
         this.produto = new Produto()
-        alert('Produto cadastrado com sucesso!')
+       this.alerta.showAlertSucess('Produto cadastrado com sucesso!')
         this.findAllProdutos()
       })
     }
@@ -88,7 +89,7 @@ export class AdminComponent implements OnInit {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate(['/feed'])
-        alert('Categoria cadastrada com sucesso!')
+        this.alerta.showAlertSucess('Categoria cadastrada com sucesso!')
         this.findAllCategorias()
       })
      }

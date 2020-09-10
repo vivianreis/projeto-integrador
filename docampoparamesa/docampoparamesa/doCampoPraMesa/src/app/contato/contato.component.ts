@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contato',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
 
-  ngOnInit(): void {
+    private router: Router
+  ) { }
+
+  ngOnInit(){
+
+    window.scroll(0,0)
+  }
+
+  btnNao(){
+    this.router.navigate(['/home'])
   }
 
 }
