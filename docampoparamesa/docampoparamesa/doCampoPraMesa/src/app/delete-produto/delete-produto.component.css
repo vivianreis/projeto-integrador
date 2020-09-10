@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&display=swap');
+
+h3, h2, small, p {
+    font-family: 'Gloria Hallelujah', cursive;
+}

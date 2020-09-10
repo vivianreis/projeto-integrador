@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
     <nav>
         <div class="nav nav-tabs mt-5 mb-5" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
@@ -11,8 +11,10 @@
 
         <!--POST DO PRODUTO-->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8">
+
                     <div class="col-md-12 mb-4">
                         <h1 id="titulos" class="text-center mb-4">Cadastre um novo Produto</h1>
 
@@ -21,7 +23,7 @@
                             <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o produto"
                                 [(ngModel)]='produto.nome'>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="text-monospace" for="titulo">Preço:</label>
                             <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o preço"
@@ -29,7 +31,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="text-monospace" for="titulo">Quantidade:</label>
+                            <label class="text-monospace" for="titulo">Quantidade (em caixas):</label>
                             <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a quantidade"
                                 [(ngModel)]='produto.quantidade'>
                         </div>
@@ -41,44 +43,46 @@
                         </div>
 
                         <div class="form-group m-0 mb-3">
-                            <label class="text-monospace" for="tema">Escolha uma Categoria ou 
+                            <label class="text-monospace" for="tema">Escolha uma Categoria ou
                                 <a routerLink="/cadastro-categoria">Cadastre uma Categoria</a> </label>
-                            <select name="tema" id='categoria' class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
-                              <option *ngFor='let item of listaCategorias' value={{item.id}}>
-                                {{item.nome}}
-                              </option>
-                           </select>
-                          </div>
-                          <div class="col-md-6 d-flex justify-content-end">
-                              <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
-                          </div>
+                            <select name="tema" id='categoria' class="form-control" [(ngModel)]='idCategoria'
+                                (change)='findByIdCategoria()'>
+                                <option *ngFor='let item of listaCategorias' value={{item.id}}>
+                                    {{item.nome}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
+                        </div>
 
                     </div>
                 </div>
 
                 <table class="table table-hover">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Quantidade</th>
-                        <th scope="col" class="d-flex justify-content-end">Modificações</th>
-                      </tr>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col" class="d-flex justify-content-end">Modificações</th>
+                        </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor='let item of listaProdutos'>
-                        <th scope="row">{{item.id}}</th>
-                        <td>{{item.nome}}</td>
-                        <td>{{item.preco}}</td>
-                        <td>{{item.quantidade}}</td>
-                        <td class="d-flex justify-content-end">
-                            <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-produto', item.id]">Editar</a>
-                            <a class="btn btn-outline-danger"[routerLink]="['/delete-produto', item.id]">Apagar</a>
-                        </td>
-                      </tr>
+                        <tr *ngFor='let item of listaProdutos'>
+                            <th scope="row">{{item.id}}</th>
+                            <td>{{item.nome}}</td>
+                            <td>{{item.preco}}</td>
+                            <td>{{item.quantidade}}</td>
+                            <td class="d-flex justify-content-end">
+                                <a class="btn btn-outline-info mr-3"
+                                    [routerLink]="['/editar-produto', item.id]">Editar</a>
+                                <a class="btn btn-outline-danger" [routerLink]="['/delete-produto', item.id]">Apagar</a>
+                            </td>
+                        </tr>
                     </tbody>
-                  </table>
+                </table>
 
                 <hr>
 
@@ -88,51 +92,62 @@
 
 
         <!--POST DA CATEGORIA-->
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="tab-pane fade " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center ">
+
                 <div class="col-md-8">
-                    
+
+                    <div class="col-md-12 mb-4">
                         <h1 id="titulos" class="text-center mb-4">Cadastre uma nova Categoria</h1>
 
                         <div class="form-group">
                             <label class="text-monospace" for="titulo">Nome da Categoria:</label>
-                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a categoria" [(ngModel)]='categoria.nome'>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui a categoria"
+                                [(ngModel)]='categoria.nome'>
                         </div>
 
                         <div class="form-group">
                             <label class="text-monospace" for="titulo">Nome do Setor:</label>
-                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor" [(ngModel)]='categoria.setor'>
+                            <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor"
+                                [(ngModel)]='categoria.setor'>
                         </div>
 
-                        <a class="btn btn-success" (click)='cadastrarCategoria()'>Cadastrar</a>
-                    
-                
 
 
-                <hr>
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
 
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col"></th>
                             <th scope="col">Nome</th>
                             <th scope="col">Setor</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor='let item of listaCategorias'> 
+                        <tr *ngFor='let item of listaCategorias'>
                             <th scope="row">{{item.id}}</th>
                             <td>{{item.nome}}</td>
                             <td>{{item.setor}}</td>
                             <td class="d-flex justify-content-end">
-                                <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-categoria', item.id]">Editar</a>
-                                <a class="btn btn-outline-danger"[routerLink]="['/delete-categoria', item.id]">Apagar</a>
+                                <a class="btn btn-outline-info mr-3"
+                                    [routerLink]="['/editar-categoria', item.id]">Editar</a>
+                                <a class="btn btn-outline-danger"
+                                    [routerLink]="['/delete-categoria', item.id]">Apagar</a>
                             </td>
-                            
+
                         </tr>
-                        
+
                     </tbody>
                 </table>
 
