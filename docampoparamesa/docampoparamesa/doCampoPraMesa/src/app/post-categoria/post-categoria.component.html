@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container d-flex justify-content-center">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12 mt-5 ">
             <div class="col-md-12 mb-4">
-                <h3 class="text-center mb-4 text-monospace">Cadastre uma nova Categoria</h3>
+                <h1 class="text-center mb-4 ">Cadastre uma nova Categoria</h1>
 
                 <div class="form-group">
                     <label class="text-monospace" for="titulo">Nome da Categoria:</label>
@@ -14,18 +14,24 @@
                     <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor" [(ngModel)]='categoria.setor'>
                 </div>
 
-                <a class="btn btn-success" (click)='cadastrarCategoria()'>Cadastrar</a>
-                <button class="btn btn-outline-danger" (click)="btnNao()" >Cancelar</button>
+                <div class="div">
+                    
+                </div>
+                <div class="d-flex justify-content-center  align-items-center">
+                    <a class="btn btn-success mr-5" (click)='cadastrarCategoria()'>Cadastrar</a>
+                    <button class="btn btn-danger ml-5" (click)="btnNao()" >Cancelar</button>
+                </div>
+                
             </div>
         </div>
 
 
         <hr>
 
-        <table class="table table-hover">
+        <table class="table table-hover mt-3">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col"></th>
                     <th scope="col">Nome</th>
                     <th scope="col">Setor</th>
                     
