@@ -34,6 +34,14 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    let token = localStorage.getItem('token')
+
+    if (token == null) {
+      this.router.navigate(['/login'])
+      this.alerta.showAlertDanger('Faça login para continuar.')
+    }
+
     window.scroll(0,0)
 
     this.findAllCategorias()
