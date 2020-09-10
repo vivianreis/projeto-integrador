@@ -41,7 +41,7 @@
             <h5 class="card-title">Produto: {{item.nome}}</h5>
             <p class="card-text">Categoria: {{item.categoria.nome}}</p>
             <p class="card-text">Preço: R${{item.preco}}/kg</p>
-            <a href="#" class="btn btn-success">Comprar</a>
+            <a class="btn btn-success" [routerLink]="['/carrinho', item.id]">Comprar</a>
           </div>
         </div>
       </div>

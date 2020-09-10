@@ -1,0 +1,65 @@
+<div class="container">
+    <h1 class="mt-3">Carrinho</h1>
+    <div class="row mb-5 mt-5 d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-3 d-flex justify-content-center">
+                            <img src="{{produto.imagem}}" alt="LARANJAÇO" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="col-md-4">
+                            <h3>{{produto.nome}}</h3>
+                            <h5>Preço: {{produto.preco}}</h5>
+                            <h5>Categoria: {{produto.categoria.nome}}</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row ">
+                                <div class="col-md-4 p-1">
+                                    <button class="btn btn-outline-danger w-100" (click)='menos()'>-</button>
+                                </div>
+
+                                <div class="col-md-4 p-1">
+                                    <input type="text" class="form-control" disabled [(ngModel)]='quantidade'>
+                                </div>
+
+                                <div class="col-md-4 p-1">
+                                    <button class="btn btn-outline-success w-100" (click)='mais()'>+</button>
+                                </div>
+
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-12">
+                                    <h5>Preço Total: R$ {{precoTotal}} </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <h3>Finalizar Compra</h3>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center mb-5 mt-5">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Método de Pagamento</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Dinheiro</option>
+                  <option>Cartão de Crédito</option>
+                  <option>Boleto</option>
+                </select>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-outline-success h-100 mt-3" (click)='finalizar()'>Finalizar Compra</button>
+        </div>
+    </div>
+
+</div>

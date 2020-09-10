@@ -23,6 +23,7 @@ import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 
@@ -44,6 +45,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     DeleteCategoriaComponent,
     PostCategoriaComponent,
     AlertasComponent,
+    CarrinhoComponent,
     
   ],
   imports: [
