@@ -1,9 +1,12 @@
     <div class="container">
 
-    <div class="row mt-5 mb-5">
+    <div class="row mt-5 mb-5 d-flex justify-content-center">
         <div class="col-md-8">
-  
+            
             <div>
+                <div class="mt-2 mb-5 text-center">
+                    <h2>Atualize a Categoria</h2>
+                </div>
                 <div class="form-group">
                   <label for="categoria">Nome da categoria:</label>
                   <input type="text" class="form-control" id="categoria" placeholder="Digite aqui o seu titulo" [(ngModel)]="categoria.nome">
@@ -13,12 +16,10 @@
                     <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o setor" [(ngModel)]='categoria.setor'>
                 </div>
   
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
-                </div>
-                <div class="d-flex justify-content-first">
-                    <button type="button" class="btn btn-outline-danger w-25" (click)="cancelar()">Cancelar</button>
-                </div>
+                <div class="d-flex justify-content-center  align-items-center mt-5">
+                    <button type="submit" class="btn btn-success mr-5"(click)="salvar()">Atualizar</button>
+                    <button class="btn btn-danger ml-5" (click)="cancelar()" >Cancelar</button>
+                    </div>
             </div>
   
         </div>
