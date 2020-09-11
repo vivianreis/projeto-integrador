@@ -33,15 +33,13 @@
 
     <div class="row mt-5 mb-3">
       <div class="col-md-4 d-flex justify-content-center w-100" *ngFor="let item of listaProdutos">
-        <div class="card mb-5" style="width: 18rem">
-          <img
-            src="{{item.imagem}}"
-            class="card-img-top" alt="...">
+        <div class="card mb-5 shadow" style="width: 18rem">
+          <img src="{{item.imagem}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Produto: {{item.nome}}</h5>
             <p class="card-text">Categoria: {{item.categoria.nome}}</p>
             <p class="card-text">Preço: R${{item.preco}}/kg</p>
-            <a class="btn btn-success" [routerLink]="['/carrinho', item.id]">Comprar</a>
+            <a class="btn btn-success" (click)='compra' [routerLink]="['/carrinho', item.id]">Comprar</a>
           </div>
         </div>
       </div>

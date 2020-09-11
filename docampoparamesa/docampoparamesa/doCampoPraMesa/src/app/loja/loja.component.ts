@@ -3,6 +3,8 @@ import { Produto } from '../model/Produto';
 import { Categoria } from '../model/Categoria';
 import { ProdutoService } from '../service/produto.service';
 import { CategoriaService } from '../service/categoria.service';
+import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-loja',
@@ -20,10 +22,13 @@ export class LojaComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    public router: Router,
+    public alerta: AlertasService
   ) { }
 
   ngOnInit() {
+       
     this.findAllProdutos()
     this.findAllCategorias()
   }
@@ -45,6 +50,15 @@ export class LojaComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.categoria.id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     })
+  }
+
+  compra() {
+    let token = localStorage.getItem('token')
+
+    if (token == null) {
+      this.router.navigate(['/login'])
+      this.alerta.showAlertDanger('Faça login para continuar.')
+    }
   }
 
 }
