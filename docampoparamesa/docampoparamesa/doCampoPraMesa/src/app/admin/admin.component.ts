@@ -91,8 +91,8 @@ export class AdminComponent implements OnInit {
   }
 
   cadastrarCategoria() {
-    if (this.categoria.nome == null ) {
-      alert('Preencha o campo de nome do tema corretamente')
+    if (this.categoria.nome == null || this.categoria.setor == null ) {
+      this.alerta.showAlertDanger('Preencha todos os campos corretamente')
      } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
