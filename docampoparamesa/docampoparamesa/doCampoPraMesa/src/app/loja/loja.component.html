@@ -19,12 +19,12 @@
             <option *ngFor='let item of listaCategorias' value={{item.id}}>
               {{item.nome}}
             </option>
-            
+
           </select>
           <!--<input type="text" class="form-control" id="titulo" placeholder="">-->
         </div>
-        <a href="#" class="btn btn-success">Pesquisar</a>
-        
+        <a class="btn btn-success" [(ngModel)]='titulo' [(ngModel)]='nomeCategoria' (click)='findByTituloProduto()' (click)='findByNomeCategoria()'>Pesquisar</a>
+
       </div>
     </div>
   </div>

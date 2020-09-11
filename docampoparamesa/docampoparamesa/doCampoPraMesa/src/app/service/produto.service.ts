@@ -33,5 +33,9 @@ export class ProdutoService {
     return this.http.delete(`http://localhost:9000/produtos/${id}`, this.token)
   }
 
+  getByTituloProduto(titulo: string){
+    return this.http.get(`http://localhost:9000/produtos/titulo/${titulo}`, this.token)
+
+  }
 
 }

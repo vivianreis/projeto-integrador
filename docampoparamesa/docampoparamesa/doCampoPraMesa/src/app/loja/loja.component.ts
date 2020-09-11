@@ -13,10 +13,12 @@ export class LojaComponent implements OnInit {
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  titulo: string
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-  idCategoria: number 
+  idCategoria: number
+  nomeCategoria: string
 
   constructor(
     private produtoService: ProdutoService,
@@ -46,5 +48,28 @@ export class LojaComponent implements OnInit {
       this.categoria = resp;
     })
   }
+
+  findByTituloProduto(){
+    if (this.titulo === ''){
+      this.findAllProdutos()
+    }else{
+      this.produtoService.getByTituloProduto(this.titulo).subscribe((resp: Produto[]) => {
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  findByNomeCategoria(){
+    if (this.nomeCategoria === ''){
+      this.findAllCategorias()
+    }else{
+      this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: Categoria[]) => {
+        this.listaCategorias = resp
+      })
+    }
+  }
+
+
+
 
 }
