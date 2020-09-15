@@ -14,23 +14,23 @@ export class ProdutoService {
   }
 
   getAllProdutos(){
-    return this.http.get('http://localhost:8080/produtos', this.token)
+    return this.http.get('http://localhost:9000/produtos', this.token)
   }
 
   getByIdProdutos(id: number) {
-    return this.http.get(`http://localhost:8080/produtos/${id}`, this.token)
+    return this.http.get(`http://localhost:9000/produtos/${id}`, this.token)
   }
 
   postProduto(produto: Produto) {
-    return this.http.post('http://localhost:8080/produtos', produto, this.token)
+    return this.http.post('http://localhost:9000/produtos', produto, this.token)
   }
 
   putProduto(produto: Produto) {
-    return this.http.put('http://localhost:8080/produtos', produto, this.token)
+    return this.http.put('http://localhost:9000/produtos', produto, this.token)
   }
 
   deleteProduto(id: number){
-    return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
+    return this.http.delete(`http://localhost:9000/produtos/${id}`, this.token)
   }
 
 
