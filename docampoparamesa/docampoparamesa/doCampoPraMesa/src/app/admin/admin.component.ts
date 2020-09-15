@@ -91,15 +91,9 @@ export class AdminComponent implements OnInit {
   }
 
   cadastrarCategoria() {
-<<<<<<< HEAD
-    if (this.categoria.nome == null ) {
-      alert('Preencha o campo de nome do tema corretamente')
-    } else {
-=======
     if (this.categoria.nome == null || this.categoria.setor == null ) {
       this.alerta.showAlertDanger('Preencha todos os campos corretamente')
-     } else {
->>>>>>> 98cbeb1c645324eb22b9689a713f4b1cb80fb649
+    } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate(['/feed'])
