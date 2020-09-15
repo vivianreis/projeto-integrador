@@ -22,7 +22,7 @@ export class AdminComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-  idCategoria: number 
+  idCategoria: number
 
 
   constructor(
@@ -84,7 +84,7 @@ export class AdminComponent implements OnInit {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
         this.produto = resp
         this.produto = new Produto()
-       this.alerta.showAlertSucess('Produto cadastrado com sucesso!')
+      this.alerta.showAlertSucess('Produto cadastrado com sucesso!')
         this.findAllProdutos()
       })
     }
@@ -93,13 +93,13 @@ export class AdminComponent implements OnInit {
   cadastrarCategoria() {
     if (this.categoria.nome == null ) {
       alert('Preencha o campo de nome do tema corretamente')
-     } else {
+    } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate(['/feed'])
         this.alerta.showAlertSucess('Categoria cadastrada com sucesso!')
         this.findAllCategorias()
       })
-     }
-   }
+    }
+  }
   }

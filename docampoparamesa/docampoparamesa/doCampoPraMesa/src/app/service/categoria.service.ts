@@ -14,27 +14,27 @@ export class CategoriaService {
   }
 
   getAllCategorias(){
-    return this.http.get('http://localhost:9000/categoria', this.token)
+    return this.http.get('http://localhost:8080/categoria', this.token)
   }
 
   getByIdCategoria(id: number) {
-    return this.http.get(`http://localhost:9000/categoria/${id}`, this.token)
+    return this.http.get(`http://localhost:8080/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria) {
-    return this.http.post('http://localhost:9000/categoria', categoria, this.token)
+    return this.http.post('http://localhost:8080/categoria', categoria, this.token)
   }
 
   putCategoria(categoria: Categoria) {
-    return this.http.put('http://localhost:9000/categoria', categoria, this.token)
+    return this.http.put('http://localhost:8080/categoria', categoria, this.token)
   }
 
   deleteByIdCategoria(id: number){
-    return this.http.delete(`http://localhost:9000/categoria/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/categoria/${id}`, this.token)
   }
 
   getByNomeCategoria(nome: string){
-    return this.http.get(`http://localhost:9000/categoria/nome/${nome}`, this.token)
+    return this.http.get(`http://localhost:8080/categoria/nome/${nome}`, this.token)
   }
 
 }

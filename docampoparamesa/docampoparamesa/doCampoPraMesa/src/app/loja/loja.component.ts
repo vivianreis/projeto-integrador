@@ -18,7 +18,7 @@ export class LojaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-  idCategoria: number 
+  idCategoria: number
 
   constructor(
     private produtoService: ProdutoService,
@@ -28,7 +28,7 @@ export class LojaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-       
+      
     this.findAllProdutos()
     this.findAllCategorias()
   }
