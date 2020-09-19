@@ -15,6 +15,7 @@ export class LojaComponent implements OnInit {
 
   produto: Produto = new Produto()
   listaProdutos: Produto[]
+  titulo: string
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]

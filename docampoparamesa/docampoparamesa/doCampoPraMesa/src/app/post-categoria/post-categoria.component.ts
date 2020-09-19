@@ -14,7 +14,7 @@ export class PostCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
-  idCategoria: number 
+  idCategoria: number
 
 
   constructor(
@@ -43,18 +43,18 @@ export class PostCategoriaComponent implements OnInit {
 
   cadastrarCategoria() {
     if (this.categoria.nome == null || this.categoria.setor == null) {
-     this.alerta.showAlertDanger('Preencha o campo de nome do tema corretamente')
-     } else {
+    this.alerta.showAlertDanger('Preencha o campo de nome do tema corretamente')
+    } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.router.navigate(['/feed'])
         this.alerta.showAlertSucess('Categoria cadastrada com sucesso!')
         this.findAllCategorias()
       })
-     }
-   }
+    }
+  }
 
-   btnNao(){
+  btnNao(){
     this.router.navigate(['/admin'])
   }
 
