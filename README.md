@@ -62,12 +62,14 @@ Utilizamos o Spring initializr para selecionar versão utilizada (Java 8) o gere
 <hr>
 
 ## 🚀 Deploy e Docker
+<p>
 <img align="left" src="https://i.imgur.com/illDKsD.png?1">
 Deploy é a fase do desenvolvimento que passamos o que desenvolvemos para a produção. (Você desenvolve o aplicativo na sua máquina e depois coloca ele em um servidor). O deploy ele pode ser feito num contexto de máquina virtual ou em um contexto de contêiner.
 <br>
 Docker é um software contêiner da empresa Docker Inc com ele nós podemos colocar as aplicações em um contêiner que possui todos os recursos necessários e que permite e testar, implantar e publicar mais rapidamente.
-
 <hr>
+</p>
+
 
 ## 💪 Nosso time
  <table>
